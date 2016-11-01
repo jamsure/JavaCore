@@ -1,10 +1,12 @@
 package com.ddb.JavaCore.datetype;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StuAvg {
 
 	public static void main(String[] args) {
+		
 		int classNum = 3;
 		int stuNum = 4;
 		double sum = 0;
