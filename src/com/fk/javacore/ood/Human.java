@@ -1,10 +1,16 @@
 package com.fk.javacore.ood;
 
+import java.io.Serializable;
+
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter@Getter
-public class Human implements Comparable<Human>{
+public class Human implements Comparable<Human>,Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String id;
 	private String name;
 	private Integer age;
