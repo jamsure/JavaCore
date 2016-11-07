@@ -4,14 +4,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Setter@Getter
-public class Human {
+public class Human implements Comparable<Human>{
 	private String id;
 	private String name;
 	private Integer age;
 	private String work;
-	
-	
-	
+		
 	public Human() {
 		super();
 		System.out.println("执行了Human的构造方法！");
@@ -24,9 +22,12 @@ public class Human {
 		this.age = age;
 		this.work = work;
 	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
-		return "Human [id=" + id + ", name=" + name + ", age=" + age + ", work=" + work + "]";
+		return "Human [id=" + id + ", age=" + age + "]";
 	}
 
 	/* (non-Javadoc)
@@ -87,6 +88,23 @@ public class Human {
 			return false;
 		}
 		return true;
+	}
+
+	@Override
+	public int compareTo(Human o) {
+		if(this.getAge().intValue()==o.getAge().intValue()){
+			return 0;
+		}else if (this.getAge().intValue()>o.getAge().intValue()) {
+			return 1;
+		}else {
+			return -1;
+		}
+	}
+
+	public Human(String id, Integer age) {
+		super();
+		this.id = id;
+		this.age = age;
 	}
 	
 	
