@@ -7,13 +7,24 @@ interface China{
     public void sayHello(String name, int age);  
 }  
    
-public class Person implements China{  
+class Person implements China{  
     public Person() {  
            
+    }
+    public Person(String name){  
+        this.name=name;  
     }  
-    public Person(String sex){  
-        this.sex=sex;  
+    public Person(int age){  
+        this.age=age;  
     }  
+    public Person(String name, int age) {  
+        this.age=age;  
+        this.name=name;  
+    }  
+   /* public Person(String sex,String name){  
+        this.sex=sex;
+        this.name=name;
+    }*/  
     public String getSex() {  
         return sex;  
     }  
@@ -27,8 +38,14 @@ public class Person implements China{
     @Override  
     public void sayHello(String name, int age){  
         System.out.println(name+"  "+age);  
+    }
+    @Override  
+    public String toString(){  
+        return "["+this.name+"  "+this.age+"]";  
     }  
-    private String sex;  
+    private String sex; 
+    private String name;  
+    private int age;  
 }  
    
 class hello{  

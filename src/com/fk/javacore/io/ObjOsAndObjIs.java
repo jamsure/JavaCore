@@ -24,19 +24,22 @@ public class ObjOsAndObjIs {
 		oos.flush();
 		oos.close();
 
-		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
+		FileInputStream fis =new FileInputStream(file);
+		ObjectInputStream ois = new ObjectInputStream(fis);
+		List<Human> humanList = new ArrayList<Human>();
+		//int x = ois.available();
+		int x = fis.available();
+		System.out.println(x);
+		//while (ois.available() > 0) {
+			while (fis.available() > 0) {
+			humanList.add((Human) ois.readObject());
+		}
 		/*
 		 * Human humans=(Human)ois.readObject(); Human
 		 * humans1=(Human)ois.readObject(); Human
 		 * humans2=(Human)ois.readObject();
 		 */
-		List<Human> humanList = new ArrayList<Human>();
-		int x = ois.available();
-		System.out.println(x);
-		//为什么ois.available值一直是零
-		while (ois.available() > 0) {
-			humanList.add((Human) ois.readObject());
-		}
+			
 		for (Human human : humanList) {
 			System.out.println(human);
 		}
