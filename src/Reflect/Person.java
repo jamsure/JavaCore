@@ -14,6 +14,8 @@ class Person implements China{
     public Person(String name){  
         this.name=name;  
     }  
+    
+    
     public Person(int age){  
         this.age=age;  
     }  
