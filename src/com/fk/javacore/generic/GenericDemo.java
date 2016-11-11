@@ -2,10 +2,12 @@ package com.fk.javacore.generic;
 
 import java.util.ArrayList;
 
-public class GenericDemo {
+public class GenericDemo {	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) {
 		// JDK 1.5之前
 		// Collection1里面可存放整数，字符,布尔，字符串...
+	
 		ArrayList collection1 = new ArrayList();
 		collection1.add(1);
 		collection1.add(1L);

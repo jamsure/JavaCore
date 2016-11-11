@@ -9,6 +9,7 @@ public class Police extends Human {
 
 	public void setCountry(String country) {
 		this.country = country;
+		
 		}
 	
 	
