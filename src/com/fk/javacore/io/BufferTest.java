@@ -17,7 +17,9 @@ public class BufferTest {
 		
 		InputStream srcStream=new FileInputStream(src);
 		BufferedInputStream bInputStream=new BufferedInputStream(srcStream);
+		
 		OutputStream destStream=new FileOutputStream(dest);
+		
 		BufferedOutputStream bOutputStream=new BufferedOutputStream(destStream);
 		Long start=System.currentTimeMillis();
 		int i;

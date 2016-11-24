@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Setter@Getter
-public class Human implements Comparable<Human>,Serializable{
+public class Human implements Serializable,Comparable<Human>{
 	/**
 	 * 
 	 */
@@ -95,7 +95,6 @@ public class Human implements Comparable<Human>,Serializable{
 		}
 		return true;
 	}
-
 	@Override
 	public int compareTo(Human o) {
 		if(this.getAge().intValue()==o.getAge().intValue()){
@@ -112,6 +111,10 @@ public class Human implements Comparable<Human>,Serializable{
 		this.id = id;
 		this.age = age;
 	}
+
+	
+
+	
 	
 	
 }

@@ -2,12 +2,14 @@ package com.fk.javacore.collection;
 
 import java.io.PrintStream;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
 public class MapDemo {
 
+	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
 		PrintStream out=System.out;
 		Map<Long, Integer> hasMap=new HashMap<Long,Integer>();
@@ -25,6 +27,13 @@ public class MapDemo {
 		for (Entry<Long, Integer> entry : hasSetMap) {
 			out.println(entry);
 		}
+		out.println();
+		Iterator iterator=hasSetMap.iterator();
+		while (iterator.hasNext()) {
+			Object object=iterator.next();
+			out.println(object);
+		}
+		
 		
 		out.println("hasMap.put() 返回旧值或者null："+hasMap.put(9L, 940));
 		

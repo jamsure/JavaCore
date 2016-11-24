@@ -19,6 +19,7 @@ public enum EnumDemo {
 		this.des=des;
 		this.state=state;
 	}
+	
 	private EnumDemo () {
 	}
 }
